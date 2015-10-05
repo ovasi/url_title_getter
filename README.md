@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+UrlTitleGetter.get_title('https://github.com/ovasi/url_title_getter')
+#=> "ovasi/url_title_getter · GitHub"
+
+UrlTitleGetter.get_decode_url('http://hogehoge.com/%E3%81%BB%E3%81%92%E3%81%BB%E3%81%92')
+#=> "http://hogehoge.com/ほげほげ"
+# decode後に不正バイトを含んでしまうURLはdecodeせず返します。
+```
 
 ## Development
 
