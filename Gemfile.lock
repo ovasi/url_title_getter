@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    url_title_getter (0.1.1)
+    url_title_getter (0.1.2)
       nokogiri
 
 GEM
