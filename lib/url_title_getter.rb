@@ -11,6 +11,7 @@ module UrlTitleGetter
         read_data = NKF.nkf('-w -W', open(url).read)
         title = Nokogiri::HTML.parse(read_data, nil, 'utf8').xpath('//title').text
         title.strip!
+        title
       end
     rescue
       nil
