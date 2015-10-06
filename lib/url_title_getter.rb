@@ -8,8 +8,7 @@ module UrlTitleGetter
     begin
       Timeout::timeout(time_out_sec) do
         url.strip!
-        read_data = NKF.nkf('-w -W', open(url).read)
-        title = Nokogiri::HTML.parse(read_data, nil, 'utf8').xpath('//title').text
+        title = Nokogiri::HTML.parse(open(url).read).xpath('//title').text
         title.strip!
         title
       end
